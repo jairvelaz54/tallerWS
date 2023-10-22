@@ -1,8 +1,6 @@
 <?php
 require_once 'simple_html_dom.php';
-
 $array = file("text.txt", FILE_IGNORE_NEW_LINES);
-echo $array[0];
 if(empty($array)){
 echo "esta vacio";
 }else{
