@@ -4,14 +4,14 @@ include ('simple_html_dom.php');
 use Goutte\Client;
 $client=new Client();
 
-$data=recupera_links($client, "AQUI PON LA URL");
+$data=recupera_links($client, "PON AQUI LA URL DE LA PAGINA");
 foreach ($data as $valor) {
     descargar_imagen($valor,nombre($valor));
 }
 
 
 function nombre($url){
-    $cortar=explode("https://http2.mlstatic.com/D_NQ_NP_",$url);
+    $cortar=explode("PON AQUI EL PATRON",$url);
     return $cortar[1];
 }
 function connexion_pagina(Client $client, $url, $op){
@@ -26,8 +26,8 @@ function connexion_pagina(Client $client, $url, $op){
 
 function recupera_links(Client $client,$url){
     $content=connexion_pagina($client,$url,1);
-    $images;
-    $img="https://http2.mlstatic.com/D_NQ_NP_";
+    $images=array();
+    $img="PON AQUI EL PATRON";
 while(strpos($content, $img)){
     $possible_url = substr($content, strpos($content, $img));
     $pos_final = strpos($possible_url, '"');
@@ -70,5 +70,4 @@ if ($contenido_imagen !== false) {
 } else {
     echo 'No se pudo obtener el contenido de la imagen desde la URL.';
 }
-
 }

@@ -3,8 +3,7 @@ require '../vendor/autoload.php';
 include ('../simple_html_dom.php');
 use Goutte\Client;
 $client=new Client();
-$nombreCancion=str_replace(" ","+",$_GET['cancion']);
-$html=connexion_pagina($client,"https://oosound.ru/?mp3=".$nombreCancion."&s=f",2);
+$html=connexion_pagina($client,"https://oosound.ru/?mp3=00:00+Siddhartha&s=f",2);
 $cancion=extraer_cancion($html);
 echo '<audio src="'.$cancion[0].'" controls></audio>';
 
