@@ -4,7 +4,7 @@ include ('simple_html_dom.php');
 use Goutte\Client;
 $client=new Client();
 
-$data=recupera_links($client, "PONER AQUI LA URL");
+$data=recupera_links($client, "AQUI PON LA URL");
 foreach ($data as $valor) {
     descargar_imagen($valor,nombre($valor));
 }
@@ -47,7 +47,7 @@ return $images;
 function descargar_imagen($url, $nombre){
   
 // Ruta local donde deseas guardar la imagen descargada
-$ruta_local = 'prueba/'.$nombre;
+$ruta_local = 'imagenes/'.$nombre;
 
 // Crear un contexto de flujo (stream context) con verificación de SSL deshabilitada
 $context = stream_context_create([
