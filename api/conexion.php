@@ -1,6 +1,6 @@
 <?php
 
-$token = 'HolaNovato';
+$token = 'PALABRA CLAVE';
 $palabraReto = $_GET['hub_challenge'];
 $tokenVerificacion = $_GET['hub_verify_token'];
 if ($token === $tokenVerificacion) {
